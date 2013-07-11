@@ -1,0 +1,28 @@
+<!--
+	Copyright (c) 2013 iASPEC. All Rights Reserved.
+	Creation date: 2013-05-10
+	Author: Peter Li
+-->
+<ivysettings>
+
+    <settings defaultResolver="defaultChain"
+              defaultConflictManager="latest-revision"/>
+
+    <property name="nexus-public"
+              value="http://172.16.100.160:8081/nexus/content/groups/public"/>
+    <resolvers>
+
+        <chain name="defaultChain" returnFirst="true" checkmodified="true" changingPattern=".*SNAPSHOT">
+            <filesystem name="local">
+                <artifact pattern="${ivy.settings.dir}/repository/local/[artifact]-[revision].[ext]"/>
+            </filesystem>
+            <ibiblio name="shard" m2compatible="true" usepoms="false"
+                     root="${nexus-public}"
+                     pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+
+            <ibiblio name="shard" m2compatible="true" usepoms="false"
+                     root="http://repo1.maven.org/maven2/"
+                     pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+        </chain>
+    </resolvers>
+</ivysettings>

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>iaspec-bamboo</artifactId>
-    <groupId>com.iaspec.bamboo</groupId>
+    <artifactId>pt-bamboo</artifactId>
+    <groupId>com.pt.bamboo</groupId>
     <version>1.0</version>
 
     <properties>
@@ -28,102 +28,102 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.basedir}/lib</outputDirectory>
-                            <overWriteReleases>false</overWriteReleases>
-                            <overWriteSnapshots>false</overWriteSnapshots>
-                            <overWriteIfNewer>true</overWriteIfNewer>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-dependency-plugin</artifactId>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>copy-dependencies</id>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>copy-dependencies</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<outputDirectory>${project.basedir}/lib</outputDirectory>-->
+                            <!--<overWriteReleases>false</overWriteReleases>-->
+                            <!--<overWriteSnapshots>false</overWriteSnapshots>-->
+                            <!--<overWriteIfNewer>true</overWriteIfNewer>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
-                <executions>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-jar-plugin</artifactId>-->
+                <!--<version>2.4</version>-->
+                <!--<executions>-->
 
-                    <execution>
-                        <id>iaspec-commons-jar</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <classifier>commons-${project.version}</classifier>
-                            <jarName>iaspec-commons</jarName>
-                            <includes>
-                                <include>com/iaspec/commons/**</include>
-                            </includes>
-                        </configuration>
-                    </execution>
+                    <!--<execution>-->
+                        <!--<id>iaspec-commons-jar</id>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>jar</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<classifier>commons-${project.version}</classifier>-->
+                            <!--<jarName>iaspec-commons</jarName>-->
+                            <!--<includes>-->
+                                <!--<include>com/iaspec/commons/**</include>-->
+                            <!--</includes>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
 
-                    <execution>
-                        <id>iaspec-javaee-core-jar</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <classifier>core-${project.version}</classifier>
-                            <jarName>iaspec-javaee-core</jarName>
-                            <includes>
-                                <include>**/com/iaspec/javaee/core/**</include>
-                            </includes>
-                        </configuration>
-                    </execution>
+                    <!--<execution>-->
+                        <!--<id>iaspec-javaee-core-jar</id>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>jar</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<classifier>core-${project.version}</classifier>-->
+                            <!--<jarName>iaspec-javaee-core</jarName>-->
+                            <!--<includes>-->
+                                <!--<include>**/com/iaspec/javaee/core/**</include>-->
+                            <!--</includes>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
 
-                    <execution>
-                        <id>iaspec-javaee-web-jar</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <classifier>web-${project.version}</classifier>
-                            <jarName>iaspec-javaee-web</jarName>
-                            <includes>
-                                <include>**/com/iaspec/javaee/web/**</include>
-                            </includes>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>iaspec-javaee-util-jar</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <classifier>util-${project.version}</classifier>
-                            <jarName>iaspec-javaee-util</jarName>
-                            <includes>
-                                <include>com.pt.javaee.util/**</include>
-                            </includes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+                    <!--<execution>-->
+                        <!--<id>iaspec-javaee-web-jar</id>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>jar</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<classifier>web-${project.version}</classifier>-->
+                            <!--<jarName>iaspec-javaee-web</jarName>-->
+                            <!--<includes>-->
+                                <!--<include>**/com/iaspec/javaee/web/**</include>-->
+                            <!--</includes>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>iaspec-javaee-util-jar</id>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>jar</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<classifier>util-${project.version}</classifier>-->
+                            <!--<jarName>iaspec-javaee-util</jarName>-->
+                            <!--<includes>-->
+                                <!--<include>com.pt.javaee.util/**</include>-->
+                            <!--</includes>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
 
         </plugins>
     </build>
 
     <distributionManagement>
-        <repository>
-            <id>thirdparty</id>
-            <name>Internal Releases</name>
-            <url>http://localhost:8081/nexus/content/repositories/thirdparty</url>
-        </repository>
+        <!--<repository>-->
+            <!--<id>thirdparty</id>-->
+            <!--<name>Internal Releases</name>-->
+            <!--<url>http://localhost:8081/nexus/content/repositories/thirdparty</url>-->
+        <!--</repository>-->
     </distributionManagement>
 
     <!--FAMS-->

@@ -55,58 +55,58 @@
                 <!--<executions>-->
 
                     <!--<execution>-->
-                        <!--<id>iaspec-commons-jar</id>-->
+                        <!--<id>pt-commons-jar</id>-->
                         <!--<phase>package</phase>-->
                         <!--<goals>-->
                             <!--<goal>jar</goal>-->
                         <!--</goals>-->
                         <!--<configuration>-->
                             <!--<classifier>commons-${project.version}</classifier>-->
-                            <!--<jarName>iaspec-commons</jarName>-->
+                            <!--<jarName>pt-commons</jarName>-->
                             <!--<includes>-->
-                                <!--<include>com/iaspec/commons/**</include>-->
+                                <!--<include>com/pt/commons/**</include>-->
                             <!--</includes>-->
                         <!--</configuration>-->
                     <!--</execution>-->
 
                     <!--<execution>-->
-                        <!--<id>iaspec-javaee-core-jar</id>-->
+                        <!--<id>pt-javaee-core-jar</id>-->
                         <!--<phase>package</phase>-->
                         <!--<goals>-->
                             <!--<goal>jar</goal>-->
                         <!--</goals>-->
                         <!--<configuration>-->
                             <!--<classifier>core-${project.version}</classifier>-->
-                            <!--<jarName>iaspec-javaee-core</jarName>-->
+                            <!--<jarName>pt-javaee-core</jarName>-->
                             <!--<includes>-->
-                                <!--<include>**/com/iaspec/javaee/core/**</include>-->
+                                <!--<include>**/com/pt/javaee/core/**</include>-->
                             <!--</includes>-->
                         <!--</configuration>-->
                     <!--</execution>-->
 
                     <!--<execution>-->
-                        <!--<id>iaspec-javaee-web-jar</id>-->
+                        <!--<id>pt-javaee-web-jar</id>-->
                         <!--<phase>package</phase>-->
                         <!--<goals>-->
                             <!--<goal>jar</goal>-->
                         <!--</goals>-->
                         <!--<configuration>-->
                             <!--<classifier>web-${project.version}</classifier>-->
-                            <!--<jarName>iaspec-javaee-web</jarName>-->
+                            <!--<jarName>pt-javaee-web</jarName>-->
                             <!--<includes>-->
-                                <!--<include>**/com/iaspec/javaee/web/**</include>-->
+                                <!--<include>**/com/pt/javaee/web/**</include>-->
                             <!--</includes>-->
                         <!--</configuration>-->
                     <!--</execution>-->
                     <!--<execution>-->
-                        <!--<id>iaspec-javaee-util-jar</id>-->
+                        <!--<id>pt-javaee-util-jar</id>-->
                         <!--<phase>package</phase>-->
                         <!--<goals>-->
                             <!--<goal>jar</goal>-->
                         <!--</goals>-->
                         <!--<configuration>-->
                             <!--<classifier>util-${project.version}</classifier>-->
-                            <!--<jarName>iaspec-javaee-util</jarName>-->
+                            <!--<jarName>pt-javaee-util</jarName>-->
                             <!--<includes>-->
                                 <!--<include>com.pt.javaee.util/**</include>-->
                             <!--</includes>-->
